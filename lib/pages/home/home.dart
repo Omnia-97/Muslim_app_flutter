@@ -34,22 +34,12 @@ class _HomeScreenState extends State<HomeScreen> {
             backgroundColor: Colors.transparent,
             title: Text(
               'إسلامي',
-              style: GoogleFonts.elMessiri(
-                fontSize: 30,
-                fontWeight: FontWeight.w700,
-              ),
             ),
             centerTitle: true,
           ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: index,
-            selectedItemColor: Colors.black,
-            showSelectedLabels: true,
-            showUnselectedLabels: false,
-            type: BottomNavigationBarType.fixed,
             selectedFontSize: 12.0,
-            backgroundColor: Color(0xFFB7935F),
-            unselectedItemColor: Colors.white,
             iconSize: 33,
             onTap: (value) {
               index = value;

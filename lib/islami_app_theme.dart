@@ -16,6 +16,12 @@ class MyThemeData {
     ),
 
     textTheme: TextTheme(
+      titleSmall:GoogleFonts.inter(
+        fontSize: 25,
+        letterSpacing: .5,
+        fontWeight: FontWeight.w500,
+        color: whiteColor,
+      ) ,
       bodySmall: GoogleFonts.inter(
         fontSize: 25,
         letterSpacing: .5,

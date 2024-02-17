@@ -29,6 +29,7 @@ class _SebhaTabState extends State<SebhaTab> {
         ),
         InkWell(
           onTap: sebhaClicked,
+
           child: Container(
             alignment: Alignment.center,
             child: Image(

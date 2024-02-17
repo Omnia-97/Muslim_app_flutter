@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../islami_app_theme.dart';
 import '../model/sura_model.dart';
-import '../sura_details.dart';
+import '../details_Screens/sura_details.dart';
 
 class QuranTitleWidget extends StatelessWidget {
   final String suraName;

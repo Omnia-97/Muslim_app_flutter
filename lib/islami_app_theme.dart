@@ -5,17 +5,22 @@ import 'package:google_fonts/google_fonts.dart';
 
 class MyThemeData {
   static const Color primaryColor = Color(0xFFB7935F);
-  static const Color blackColor =Colors.black ;
+  static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
-    primaryColor:primaryColor ,
+    primaryColor: primaryColor,
     dividerTheme: DividerThemeData(
       color: primaryColor,
       thickness: 3,
     ),
-
     textTheme: TextTheme(
+      titleSmall: GoogleFonts.inter(
+        fontSize: 25,
+        letterSpacing: .5,
+        fontWeight: FontWeight.w500,
+        color: whiteColor,
+      ),
       bodySmall: GoogleFonts.inter(
         fontSize: 25,
         letterSpacing: .5,
@@ -29,12 +34,17 @@ class MyThemeData {
         fontSize: 30,
         fontWeight: FontWeight.bold,
       ),
-
     ),
     scaffoldBackgroundColor: Colors.transparent,
     appBarTheme: AppBarTheme(
       centerTitle: true,
+      elevation: 0,
+      scrolledUnderElevation: 0,
       backgroundColor: Colors.transparent,
+      iconTheme: IconThemeData(
+        color: blackColor,
+        size: 30,
+      ),
       titleTextStyle: GoogleFonts.elMessiri(
         fontSize: 30,
         fontWeight: FontWeight.bold,
@@ -42,6 +52,7 @@ class MyThemeData {
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      elevation: 0,
       selectedItemColor: blackColor,
       showSelectedLabels: true,
       showUnselectedLabels: false,

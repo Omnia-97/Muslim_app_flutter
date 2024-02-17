@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/islami_app_theme.dart';
 import 'package:islami_app/model/sura_model.dart';
-import 'package:islami_app/sura_details.dart';
+import 'package:islami_app/details_Screens/sura_details.dart';
 import 'package:islami_app/widgets/quran_title_widget.dart';
 
 class QuranTab extends StatelessWidget {

@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/pages/home/home.dart';
 import 'package:islami_app/pages/splash_Screen.dart';
 import 'package:islami_app/details_Screens/sura_details.dart';
-
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'details_Screens/hadeth_details.dart';
 import 'islami_app_theme.dart';
 
@@ -17,6 +18,9 @@ class IslamiApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale("en"),
       debugShowCheckedModeBanner: false,
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,

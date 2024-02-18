@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/islami_app_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SebhaTab extends StatefulWidget {
   SebhaTab({super.key});
@@ -29,7 +30,6 @@ class _SebhaTabState extends State<SebhaTab> {
         ),
         InkWell(
           onTap: sebhaClicked,
-
           child: Container(
             alignment: Alignment.center,
             child: Image(
@@ -45,7 +45,7 @@ class _SebhaTabState extends State<SebhaTab> {
           height: 45,
         ),
         Text(
-          'عدد التسبيحات',
+          AppLocalizations.of(context)!.numberOfTasbeh,
           style: theme.textTheme.bodyMedium,
           textAlign: TextAlign.center,
         ),

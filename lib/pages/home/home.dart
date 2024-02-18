@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/pages/home/tabs/ahadeth_tab.dart';
 import 'package:islami_app/pages/home/tabs/quran_tab.dart';
 import 'package:islami_app/pages/home/tabs/radio_tab.dart';
@@ -33,9 +33,8 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             title: Text(
-              'إسلامي',
+              AppLocalizations.of(context)!.appName,
             ),
-            centerTitle: true,
           ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: index,
@@ -51,26 +50,27 @@ class _HomeScreenState extends State<HomeScreen> {
                     AssetImage('assets/images/ic_quran.png'),
                     size: 45,
                   ),
-                  label: 'القرآن'),
+                  label: AppLocalizations.of(context)!.nav_quran),
               BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/ic_ahadeth.png'),
                   ),
-                  label: 'الأحاديث'),
+                  label: AppLocalizations.of(context)!.nav_ahadeth),
               BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/ic_sebha.png'),
                     size: 45,
                   ),
-                  label: 'التسبيح'),
+                  label: AppLocalizations.of(context)!.nav_tasbeh),
               BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/ic_radio.png'),
                     size: 44,
                   ),
-                  label: 'الراديو'),
+                  label: AppLocalizations.of(context)!.nav_radio),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.settings), label: 'الإعدادات'),
+                  icon: Icon(Icons.settings),
+                  label: AppLocalizations.of(context)!.nav_settings),
             ],
           ),
           body: tabs[index],

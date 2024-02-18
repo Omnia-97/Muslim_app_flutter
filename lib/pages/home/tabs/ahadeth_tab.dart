@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/details_Screens/hadeth_details.dart';
 import 'package:islami_app/model/ahadeth_model.dart';
 
@@ -29,7 +30,7 @@ class _AhadethTabState extends State<AhadethTab> {
         ),
         Divider(),
         Text(
-          'الأحاديث',
+          AppLocalizations.of(context)!.ahadeth,
           style: theme.textTheme.bodyMedium,
         ),
         Divider(),
@@ -43,11 +44,8 @@ class _AhadethTabState extends State<AhadethTab> {
             itemBuilder: (context, index) {
               return InkWell(
                 onTap: () {
-                  Navigator.pushNamed(
-                    context,
-                    HadethDetails.routeName,
-                    arguments: ahadethFileData[index]
-                  );
+                  Navigator.pushNamed(context, HadethDetails.routeName,
+                      arguments: ahadethFileData[index]);
                 },
                 child: Text(
                   ahadethFileData[index].title,

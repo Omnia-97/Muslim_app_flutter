@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami_app/details_Screens/hadeth_details.dart';
+import 'package:islami_app/ahadeth_details/hadeth_details.dart';
 import 'package:islami_app/model/ahadeth_model.dart';
 
 class AhadethTab extends StatefulWidget {

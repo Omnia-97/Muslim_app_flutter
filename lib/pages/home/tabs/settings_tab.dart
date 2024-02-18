@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/bottom_sheet/language_bottom_sheet.dart';
 import 'package:islami_app/islami_app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -17,17 +18,31 @@ class SettingsTab extends StatelessWidget {
             AppLocalizations.of(context)!.language,
             style: theme.textTheme.bodyLarge,
           ),
-          Container(
-            padding: EdgeInsets.all(12),
-            width: double.infinity,
-            decoration: BoxDecoration(
-                border: Border.all(
-                  color: MyThemeData.primaryColor,
-                ),
-                borderRadius: BorderRadius.circular(25)),
-            child: Text(
-              AppLocalizations.of(context)!.arabic,
-              style: theme.textTheme.bodyMedium,
+          InkWell(
+            onTap: () {
+              showModalBottomSheet(
+                  context: context,
+                  isScrollControlled: true,
+                  builder: (context) {
+                    return Container(
+                      height: 580,
+                      child: LanguageBottomSheet(),
+
+                    );
+                  });
+            },
+            child: Container(
+              padding: EdgeInsets.all(12),
+              width: double.infinity,
+              decoration: BoxDecoration(
+                  border: Border.all(
+                    color: MyThemeData.primaryColor,
+                  ),
+                  borderRadius: BorderRadius.circular(25)),
+              child: Text(
+                AppLocalizations.of(context)!.arabic,
+                style: theme.textTheme.bodyMedium,
+              ),
             ),
           ),
           SizedBox(

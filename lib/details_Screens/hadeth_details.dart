@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/islami_app_theme.dart';
 import 'package:islami_app/pages/home/tabs/ahadeth_tab.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../model/ahadeth_model.dart';
 
@@ -21,7 +22,7 @@ class HadethDetails extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'إسلامى',
+            AppLocalizations.of(context)!.appName,
           ),
         ),
         body: Center(
@@ -48,17 +49,16 @@ class HadethDetails extends StatelessWidget {
                 ),
                 Expanded(
                   child: ListView.separated(
-                    separatorBuilder: (context,index) => SizedBox(
+                    separatorBuilder: (context, index) => SizedBox(
                       height: 5,
                     ),
                     itemBuilder: (context, index) {
-                    return Text(
-                      model.content[index],
-                      style: theme.textTheme.bodySmall,
-                      textAlign: TextAlign.center,
-                    );
-
-                  },
+                      return Text(
+                        model.content[index],
+                        style: theme.textTheme.bodySmall,
+                        textAlign: TextAlign.center,
+                      );
+                    },
                     itemCount: model.content.length,
                   ),
                 )

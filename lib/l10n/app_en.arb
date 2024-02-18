@@ -1,0 +1,20 @@
+{
+  "appName": "Islami",
+  "suraName": "Sura Name",
+  "ahadeth": "Ahadeth",
+  "ayatNumber" : "Ayat Number",
+  "language": "Language",
+  "arabic": "Arabic",
+  "english": "English",
+  "theme": "Theme",
+  "light": "Light",
+  "dark": "Dark",
+  "nav_quran" : "Quran",
+  "nav_ahadeth": "Ahadeth",
+  "nav_tasbeh": "Tasbeh",
+  "nav_radio": "Radio",
+  "nav_settings": "Settings",
+  "quranRadio": "Quran Radio",
+  "numberOfTasbeh" : "Number Of Tasbeh"
+
+}

@@ -30,7 +30,7 @@ class MyThemeData {
         fontSize: 25,
         fontWeight: FontWeight.w600,
       ),
-      bodyLarge: GoogleFonts.inter(
+      bodyLarge: GoogleFonts.elMessiri(
         fontSize: 30,
         fontWeight: FontWeight.bold,
       ),

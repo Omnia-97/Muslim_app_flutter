@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/islami_app_theme.dart';
 import 'package:islami_app/model/sura_model.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SuraDetails extends StatefulWidget {
   SuraDetails({super.key});
@@ -31,7 +32,7 @@ class _SuraDetailsState extends State<SuraDetails> {
       child: Scaffold(
         appBar: AppBar(
           title: Text(
-            'إسلامى',
+            AppLocalizations.of(context)!.appName,
           ),
         ),
         body: Center(
@@ -59,7 +60,9 @@ class _SuraDetailsState extends State<SuraDetails> {
                             style: Theme.of(context).textTheme.bodyLarge,
                             textAlign: TextAlign.center,
                           ),
-                          SizedBox(width: 10,),
+                          SizedBox(
+                            width: 10,
+                          ),
                           Icon(
                             Icons.play_circle_filled_outlined,
                             size: 35,

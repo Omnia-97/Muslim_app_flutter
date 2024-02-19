@@ -14,13 +14,15 @@ class HadethDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var provider2 =Provider.of<MyProvider>(context);
+    var provider2 = Provider.of<MyProvider>(context);
     var model = ModalRoute.of(context)!.settings.arguments as HadethModel;
     var theme = Theme.of(context);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage(provider2.changeBackGround(),),
+            image: AssetImage(
+              provider2.changeBackGround(),
+            ),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -64,7 +66,7 @@ class HadethDetails extends StatelessWidget {
                         model.content[index],
                         style: GoogleFonts.inter(
                           textStyle: theme.textTheme.bodySmall,
-                          color:provider2.changeQuranTextColor(),
+                          color: provider2.changeQuranTextColor(),
                         ),
                         textAlign: TextAlign.center,
                       );

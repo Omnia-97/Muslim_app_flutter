@@ -6,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 class MyThemeData {
   static const Color primaryColor = Color(0xFFB7935F);
   static const Color primaryDarkColor = Color(0xFF141A2E);
-static const Color amberColor =Color(0xFFFACC1D);
+  static const Color amberColor = Color(0xFFFACC1D);
   static const Color blackColor = Colors.black;
   static const Color whiteColor = Colors.white;
   static ThemeData lightTheme = ThemeData(
@@ -75,7 +75,7 @@ static const Color amberColor =Color(0xFFFACC1D);
         fontSize: 25,
         letterSpacing: .5,
         fontWeight: FontWeight.w500,
-        color: Color(0xFF0F1424) ,
+        color: Color(0xFF0F1424),
       ),
       bodySmall: GoogleFonts.inter(
         fontSize: 25,
@@ -89,7 +89,6 @@ static const Color amberColor =Color(0xFFFACC1D);
       bodyLarge: GoogleFonts.elMessiri(
         fontSize: 30,
         fontWeight: FontWeight.bold,
-
       ),
     ),
     scaffoldBackgroundColor: Colors.transparent,

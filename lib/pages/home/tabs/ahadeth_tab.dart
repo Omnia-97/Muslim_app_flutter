@@ -10,7 +10,6 @@ class AhadethTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return ChangeNotifierProvider<AhadethDetailsProvider>(
       create: (context) => AhadethDetailsProvider()..loadAhadethFile(),
       builder: (context, child) {
@@ -19,7 +18,7 @@ class AhadethTab extends StatelessWidget {
         return Column(
           children: [
             Image(
-              image: AssetImage('assets/images/ahadeth_screen.png'),
+              image: AssetImage('assets/images/screens_img/ahadeth_screen.png'),
               width: 312,
               height: 219,
             ),

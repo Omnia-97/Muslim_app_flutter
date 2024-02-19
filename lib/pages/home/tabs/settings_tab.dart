@@ -17,7 +17,7 @@ class _SettingsTabState extends State<SettingsTab> {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
-    var provider =Provider.of<MyProvider>(context);
+    var provider = Provider.of<MyProvider>(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 55),
       child: Column(

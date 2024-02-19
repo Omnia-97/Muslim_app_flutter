@@ -3,7 +3,7 @@ import 'package:islami_app/islami_app_theme.dart';
 
 class MyProvider extends ChangeNotifier {
   String languageCode = "en";
-  ThemeMode themeMode=  ThemeMode.dark ;
+  ThemeMode themeMode=  ThemeMode.light;
   void changeLanguage(String langCode) {
     languageCode = langCode;
     notifyListeners();

@@ -5,6 +5,8 @@ import 'package:islami_app/pages/home/tabs/quran_tab.dart';
 import 'package:islami_app/pages/home/tabs/radio_tab.dart';
 import 'package:islami_app/pages/home/tabs/sebha_tab.dart';
 import 'package:islami_app/pages/home/tabs/settings_tab.dart';
+import 'package:islami_app/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});
@@ -19,11 +21,12 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider =Provider.of<MyProvider>(context);
     return Stack(
       children: [
         Image(
           image: AssetImage(
-            'assets/images/background_home.png',
+            provider.changeBackGround(),
           ),
           fit: BoxFit.fill,
           width: double.infinity,

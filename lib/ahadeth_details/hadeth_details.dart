@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/islami_app_theme.dart';
 import 'package:islami_app/pages/home/tabs/ahadeth_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 import '../model/ahadeth_model.dart';
+import '../providers/my_provider.dart';
 
 class HadethDetails extends StatelessWidget {
   static const String routeName = 'Hadeth Details';
@@ -11,12 +14,13 @@ class HadethDetails extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider2 =Provider.of<MyProvider>(context);
     var model = ModalRoute.of(context)!.settings.arguments as HadethModel;
     var theme = Theme.of(context);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/images/background_home.png'),
+            image: AssetImage(provider2.changeBackGround(),),
             fit: BoxFit.fill),
       ),
       child: Scaffold(
@@ -33,13 +37,16 @@ class HadethDetails extends StatelessWidget {
             height: 700,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(25),
-              color: MyThemeData.whiteColor.withOpacity(.7),
+              color: provider2.changeCardColor(),
             ),
             child: Column(
               children: [
                 Text(
                   model.title,
-                  style: theme.textTheme.bodySmall,
+                  style: GoogleFonts.elMessiri(
+                    textStyle: theme.textTheme.bodyLarge,
+                    color: provider2.changeQuranTextColor(),
+                  ),
                   textAlign: TextAlign.center,
                 ),
                 Divider(
@@ -55,7 +62,10 @@ class HadethDetails extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return Text(
                         model.content[index],
-                        style: theme.textTheme.bodySmall,
+                        style: GoogleFonts.inter(
+                          textStyle: theme.textTheme.bodySmall,
+                          color:provider2.changeQuranTextColor(),
+                        ),
                         textAlign: TextAlign.center,
                       );
                     },

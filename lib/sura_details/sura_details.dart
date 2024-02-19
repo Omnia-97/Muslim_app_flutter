@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/islami_app_theme.dart';
 import 'package:islami_app/model/sura_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/providers/my_provider.dart';
 import 'package:islami_app/sura_details/sura_details_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -13,10 +15,7 @@ class SuraDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var model = ModalRoute.of(context)!.settings.arguments as SuraModel;
-    /* if (verses.isEmpty) {
-      loadFile(model.index);
-    }*/
-
+    var provider2 = Provider.of<MyProvider>(context);
     return ChangeNotifierProvider<SuraDetailsProvider>(
       create: (context) => SuraDetailsProvider()..loadFile(model.index),
       builder: (context, child) {
@@ -24,7 +23,9 @@ class SuraDetails extends StatelessWidget {
         return Container(
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/background_home.png'),
+                image: AssetImage(
+                  provider2.changeBackGround(),
+                ),
                 fit: BoxFit.fill),
           ),
           child: Scaffold(
@@ -39,7 +40,7 @@ class SuraDetails extends StatelessWidget {
                 width: 400,
                 child: Card(
                   margin: EdgeInsets.all(25),
-                  color: MyThemeData.whiteColor.withOpacity(.9),
+                  color: provider2.changeCardColor(),
                   shape: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
                     borderSide: BorderSide(color: Colors.transparent),
@@ -53,17 +54,22 @@ class SuraDetails extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
-                                'سورة ${model.name}',
-                                style: Theme.of(context).textTheme.bodyLarge,
-                                textAlign: TextAlign.center,
+                              Icon(
+                                Icons.play_circle_filled_outlined,
+                                size: 35,
+                                color: provider2.changeQuranTextColor(),
                               ),
                               SizedBox(
                                 width: 10,
                               ),
-                              Icon(
-                                Icons.play_circle_filled_outlined,
-                                size: 35,
+                              Text(
+                                'سورة ${model.name}',
+                                style: GoogleFonts.elMessiri(
+                                  textStyle:
+                                      Theme.of(context).textTheme.bodyLarge,
+                                  color: provider2.changeQuranTextColor(),
+                                ),
+                                textAlign: TextAlign.center,
                               ),
                             ],
                           ),
@@ -83,8 +89,11 @@ class SuraDetails extends StatelessWidget {
                                 children: [
                                   Text(
                                     provider.verses[index],
-                                    style:
-                                        Theme.of(context).textTheme.bodySmall,
+                                    style: GoogleFonts.inter(
+                                      textStyle:
+                                          Theme.of(context).textTheme.bodySmall,
+                                      color: provider2.changeQuranTextColor(),
+                                    ),
                                     textAlign: TextAlign.center,
                                   ),
                                 ],

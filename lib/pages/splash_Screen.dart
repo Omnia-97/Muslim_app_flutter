@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'home/home.dart';
 
@@ -25,10 +27,13 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/Splash.png'),
+          image: AssetImage(
+            provider.changeSplashScreen(),
+          ),
           fit: BoxFit.fill,
         ),
       ),

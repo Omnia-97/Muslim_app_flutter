@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/islami_app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class RadioTab extends StatelessWidget {
   const RadioTab({super.key});
@@ -8,6 +10,7 @@ class RadioTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
+    var provider = Provider.of<MyProvider>(context);
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -31,17 +34,21 @@ class RadioTab extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Image(
-              image: AssetImage('assets/images/Ic_metro-back.png'),
+              image: AssetImage(
+                provider.changeNextIc(),
+              ),
               width: 13.5,
               height: 23.14,
             ),
             Icon(
               Icons.play_arrow_rounded,
               size: 60,
-              color: MyThemeData.primaryColor,
+              color: provider.changeContainerColor(),
             ),
             Image(
-              image: AssetImage('assets/images/Ic_metro-next.png'),
+              image: AssetImage(
+                provider.changeBackIc(),
+              ),
               width: 13.5,
               height: 23.14,
             ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/islami_app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class SebhaTab extends StatefulWidget {
   SebhaTab({super.key});
@@ -21,9 +23,8 @@ class _SebhaTabState extends State<SebhaTab> {
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
-
+    var provider = Provider.of<MyProvider>(context);
     return Column(
-      //crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         SizedBox(
           height: 10,
@@ -36,7 +37,7 @@ class _SebhaTabState extends State<SebhaTab> {
               width: 230,
               height: 300,
               image: AssetImage(
-                'assets/images/sebha_screen.png',
+                provider.changeSeb7aImage(),
               ),
             ),
           ),
@@ -57,7 +58,7 @@ class _SebhaTabState extends State<SebhaTab> {
           height: 81,
           width: 69,
           decoration: BoxDecoration(
-            color: MyThemeData.primaryColor.withOpacity(.57),
+            color: provider.changeCounterContainerColor(),
             borderRadius: BorderRadius.circular(25),
           ),
           child: Text(
@@ -73,7 +74,7 @@ class _SebhaTabState extends State<SebhaTab> {
           height: 51,
           width: 137,
           decoration: BoxDecoration(
-            color: MyThemeData.primaryColor,
+            color: provider.changeContainerColor(),
             borderRadius: BorderRadius.circular(25),
           ),
           child: Text(

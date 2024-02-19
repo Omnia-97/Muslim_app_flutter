@@ -21,7 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var provider =Provider.of<MyProvider>(context);
+    var provider = Provider.of<MyProvider>(context);
     return Stack(
       children: [
         Image(
@@ -50,24 +50,24 @@ class _HomeScreenState extends State<HomeScreen> {
             items: [
               BottomNavigationBarItem(
                   icon: ImageIcon(
-                    AssetImage('assets/images/ic_quran.png'),
+                    AssetImage('assets/images/ic/ic_quran.png'),
                     size: 45,
                   ),
                   label: AppLocalizations.of(context)!.nav_quran),
               BottomNavigationBarItem(
                   icon: ImageIcon(
-                    AssetImage('assets/images/ic_ahadeth.png'),
+                    AssetImage('assets/images/ic/ic_ahadeth.png'),
                   ),
                   label: AppLocalizations.of(context)!.nav_ahadeth),
               BottomNavigationBarItem(
                   icon: ImageIcon(
-                    AssetImage('assets/images/ic_sebha.png'),
+                    AssetImage('assets/images/ic/ic_sebha.png'),
                     size: 45,
                   ),
                   label: AppLocalizations.of(context)!.nav_tasbeh),
               BottomNavigationBarItem(
                   icon: ImageIcon(
-                    AssetImage('assets/images/ic_radio.png'),
+                    AssetImage('assets/images/ic/ic_radio.png'),
                     size: 44,
                   ),
                   label: AppLocalizations.of(context)!.nav_radio),

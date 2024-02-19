@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:islami_app/islami_app_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/providers/my_provider.dart';
 import 'package:islami_app/widgets/quran_title_widget.dart';
@@ -242,14 +241,14 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var provider =Provider.of<MyProvider>(context);
+    var provider = Provider.of<MyProvider>(context);
     return Column(
       children: [
         Container(
           alignment: Alignment.center,
           child: Image(
             image: AssetImage(
-              'assets/images/quran_tab.png',
+              'assets/images/screens_img/quran_tab.png',
             ),
           ),
         ),
@@ -263,7 +262,6 @@ class QuranTab extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-
             Container(
               width: 1.5,
               height: 38,
@@ -276,7 +274,6 @@ class QuranTab extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
             ),
-
           ],
         ),
         const Divider(),

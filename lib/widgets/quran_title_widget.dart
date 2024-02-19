@@ -18,7 +18,7 @@ class QuranTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var provider =Provider.of<MyProvider>(context);
+    var provider = Provider.of<MyProvider>(context);
     return Row(
       children: [
         Expanded(
@@ -40,7 +40,7 @@ class QuranTitleWidget extends StatelessWidget {
         Container(
           width: 1.5,
           height: 38,
-          color:provider.changeContainerColor(),
+          color: provider.changeContainerColor(),
         ),
         Expanded(
           child: Text(
@@ -49,7 +49,6 @@ class QuranTitleWidget extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-
       ],
     );
   }

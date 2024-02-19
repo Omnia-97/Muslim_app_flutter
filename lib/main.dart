@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:islami_app/pages/home/home.dart';
 import 'package:islami_app/pages/splash_Screen.dart';
@@ -23,7 +22,7 @@ class IslamiApp extends StatelessWidget {
   const IslamiApp({super.key});
   @override
   Widget build(BuildContext context) {
-    var provider =Provider.of<MyProvider>(context);
+    var provider = Provider.of<MyProvider>(context);
     return MaterialApp(
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,

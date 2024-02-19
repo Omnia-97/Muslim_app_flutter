@@ -70,19 +70,6 @@ class MyProvider extends ChangeNotifier {
     }
   }
 
-  String changeBackIc() {
-    if (themeMode == ThemeMode.light) {
-      return "assets/images/ic/Ic_metro-back.png";
-    } else {
-      return "assets/images/dark_mode/Icon metro-back_dark.png";
-    }
-  }
 
-  String changeNextIc() {
-    if (themeMode == ThemeMode.light) {
-      return "assets/images/ic/Ic_metro-next.png";
-    } else {
-      return "assets/images/dark_mode/Icon metro-next_dark.png";
-    }
-  }
+
 }

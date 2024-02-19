@@ -16,6 +16,7 @@ class SuraDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     var model = ModalRoute.of(context)!.settings.arguments as SuraModel;
     var provider2 = Provider.of<MyProvider>(context);
+    bool isTextDirectionRTL = Directionality.of(context) == TextDirection.rtl;
     return ChangeNotifierProvider<SuraDetailsProvider>(
       create: (context) => SuraDetailsProvider()..loadFile(model.index),
       builder: (context, child) {
@@ -54,23 +55,46 @@ class SuraDetails extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Icon(
-                                Icons.play_circle_filled_outlined,
-                                size: 35,
-                                color: provider2.changeQuranTextColor(),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Text(
-                                'سورة ${model.name}',
-                                style: GoogleFonts.elMessiri(
-                                  textStyle:
-                                      Theme.of(context).textTheme.bodyLarge,
+                             if( isTextDirectionRTL)...[
+                               Icon(
+                                 Icons.play_circle_filled_outlined,
+                                 size: 35,
+                                 color: provider2.changeQuranTextColor(),
+                               ),
+                               SizedBox(
+                                 width: 10,
+                               ),
+                               Text(
+                                 'سورة ${model.name}',
+                                 style: GoogleFonts.elMessiri(
+                                   textStyle:
+                                   Theme.of(context).textTheme.bodyLarge,
+                                   color: provider2.changeQuranTextColor(),
+                                 ),
+                                 textAlign: TextAlign.center,
+                               ),
+                             ],
+                              if(!isTextDirectionRTL)...[
+                                Text(
+                                  'سورة ${model.name}',
+                                  style: GoogleFonts.elMessiri(
+                                    textStyle:
+                                    Theme.of(context).textTheme.bodyLarge,
+                                    color: provider2.changeQuranTextColor(),
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
+                                Icon(
+                                  Icons.play_circle_filled_outlined,
+                                  size: 35,
                                   color: provider2.changeQuranTextColor(),
                                 ),
-                                textAlign: TextAlign.center,
-                              ),
+                              ]
+
+
                             ],
                           ),
                         ),

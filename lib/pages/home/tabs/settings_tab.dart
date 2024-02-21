@@ -16,16 +16,17 @@ class SettingsTab extends StatefulWidget {
 class _SettingsTabState extends State<SettingsTab> {
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
+    var theme = Theme.of(context).textTheme;
     var provider = Provider.of<MyProvider>(context);
+    var appLocalizations = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 55),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            AppLocalizations.of(context)!.language,
-            style: theme.textTheme.bodyLarge,
+            appLocalizations.language,
+            style: theme.bodyLarge,
           ),
           InkWell(
             onTap: () {
@@ -49,9 +50,9 @@ class _SettingsTabState extends State<SettingsTab> {
                   borderRadius: BorderRadius.circular(25)),
               child: Text(
                 provider.languageCode == 'en'
-                    ? AppLocalizations.of(context)!.english
-                    : AppLocalizations.of(context)!.arabic,
-                style: theme.textTheme.bodyMedium,
+                    ? appLocalizations.english
+                    : appLocalizations.arabic,
+                style: theme.bodyMedium,
               ),
             ),
           ),
@@ -59,8 +60,8 @@ class _SettingsTabState extends State<SettingsTab> {
             height: 16,
           ),
           Text(
-            AppLocalizations.of(context)!.theme,
-            style: theme.textTheme.bodyLarge,
+            appLocalizations.theme,
+            style: theme.bodyLarge,
           ),
           InkWell(
             onTap: () {
@@ -84,9 +85,9 @@ class _SettingsTabState extends State<SettingsTab> {
                   borderRadius: BorderRadius.circular(25)),
               child: Text(
                 provider.themeMode == ThemeMode.light
-                    ? AppLocalizations.of(context)!.light
-                    : AppLocalizations.of(context)!.dark,
-                style: theme.textTheme.bodyMedium,
+                    ? appLocalizations.light
+                    : appLocalizations.dark,
+                style: theme.bodyMedium,
               ),
             ),
           ),

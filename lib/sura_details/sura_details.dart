@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:islami_app/islami_app_theme.dart';
 import 'package:islami_app/model/sura_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/providers/my_provider.dart';
@@ -17,6 +16,8 @@ class SuraDetails extends StatelessWidget {
     var model = ModalRoute.of(context)!.settings.arguments as SuraModel;
     var provider2 = Provider.of<MyProvider>(context);
     bool isTextDirectionRTL = Directionality.of(context) == TextDirection.rtl;
+    var appLocalizations = AppLocalizations.of(context)!;
+    var theme =Theme.of(context).textTheme;
     return ChangeNotifierProvider<SuraDetailsProvider>(
       create: (context) => SuraDetailsProvider()..loadFile(model.index),
       builder: (context, child) {
@@ -32,7 +33,7 @@ class SuraDetails extends StatelessWidget {
           child: Scaffold(
             appBar: AppBar(
               title: Text(
-                AppLocalizations.of(context)!.appName,
+                appLocalizations.appName,
               ),
             ),
             body: Center(
@@ -55,31 +56,31 @@ class SuraDetails extends StatelessWidget {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                             if( isTextDirectionRTL)...[
-                               Icon(
-                                 Icons.play_circle_filled_outlined,
-                                 size: 35,
-                                 color: provider2.changeQuranTextColor(),
-                               ),
-                               SizedBox(
-                                 width: 10,
-                               ),
-                               Text(
-                                 'سورة ${model.name}',
-                                 style: GoogleFonts.elMessiri(
-                                   textStyle:
-                                   Theme.of(context).textTheme.bodyLarge,
-                                   color: provider2.changeQuranTextColor(),
-                                 ),
-                                 textAlign: TextAlign.center,
-                               ),
-                             ],
-                              if(!isTextDirectionRTL)...[
+                              if (isTextDirectionRTL) ...[
+                                Icon(
+                                  Icons.play_circle_filled_outlined,
+                                  size: 35,
+                                  color: provider2.changeQuranTextColor(),
+                                ),
+                                SizedBox(
+                                  width: 10,
+                                ),
                                 Text(
                                   'سورة ${model.name}',
                                   style: GoogleFonts.elMessiri(
                                     textStyle:
-                                    Theme.of(context).textTheme.bodyLarge,
+                                        theme.bodyLarge,
+                                    color: provider2.changeQuranTextColor(),
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                              if (!isTextDirectionRTL) ...[
+                                Text(
+                                  'سورة ${model.name}',
+                                  style: GoogleFonts.elMessiri(
+                                    textStyle:
+                                        theme.bodyLarge,
                                     color: provider2.changeQuranTextColor(),
                                   ),
                                   textAlign: TextAlign.center,
@@ -92,9 +93,7 @@ class SuraDetails extends StatelessWidget {
                                   size: 35,
                                   color: provider2.changeQuranTextColor(),
                                 ),
-                              ]
-
-
+                              ],
                             ],
                           ),
                         ),
@@ -115,7 +114,7 @@ class SuraDetails extends StatelessWidget {
                                     provider.verses[index],
                                     style: GoogleFonts.inter(
                                       textStyle:
-                                          Theme.of(context).textTheme.bodySmall,
+                                         theme.bodySmall,
                                       color: provider2.changeQuranTextColor(),
                                     ),
                                     textAlign: TextAlign.center,

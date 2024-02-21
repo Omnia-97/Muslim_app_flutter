@@ -16,7 +16,7 @@ class HadethDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     var provider2 = Provider.of<MyProvider>(context);
     var model = ModalRoute.of(context)!.settings.arguments as HadethModel;
-    var theme = Theme.of(context);
+    var theme = Theme.of(context).textTheme;
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
@@ -46,7 +46,7 @@ class HadethDetails extends StatelessWidget {
                 Text(
                   model.title,
                   style: GoogleFonts.elMessiri(
-                    textStyle: theme.textTheme.bodyLarge,
+                    textStyle: theme.bodyLarge,
                     color: provider2.changeQuranTextColor(),
                   ),
                   textAlign: TextAlign.center,
@@ -65,7 +65,7 @@ class HadethDetails extends StatelessWidget {
                       return Text(
                         model.content[index],
                         style: GoogleFonts.inter(
-                          textStyle: theme.textTheme.bodySmall,
+                          textStyle: theme.bodySmall,
                           color: provider2.changeQuranTextColor(),
                         ),
                         textAlign: TextAlign.center,

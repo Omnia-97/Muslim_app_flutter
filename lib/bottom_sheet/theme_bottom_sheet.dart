@@ -13,6 +13,7 @@ class ThemeBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
     ThemeMode theme = provider.themeMode;
+    var appLocalization =AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 24),
       child: Column(
@@ -20,7 +21,7 @@ class ThemeBottomSheet extends StatelessWidget {
           RadioListTile(
             activeColor: MyThemeData.primaryColor,
             title: Text(
-              AppLocalizations.of(context)!.light,
+              appLocalization.light,
               style: GoogleFonts.elMessiri(
                 fontSize: 30,
                 color: theme == ThemeMode.light
@@ -38,7 +39,7 @@ class ThemeBottomSheet extends StatelessWidget {
           RadioListTile(
               activeColor: MyThemeData.primaryColor,
               title: Text(
-                AppLocalizations.of(context)!.dark,
+                appLocalization.dark,
                 style: GoogleFonts.elMessiri(
                   fontSize: 30,
                   color: theme == ThemeMode.dark

@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import '../providers/my_provider.dart';
 
 class ThemeBottomSheet extends StatelessWidget {
-  ThemeBottomSheet({super.key});
+  const ThemeBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {

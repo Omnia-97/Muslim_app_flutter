@@ -248,7 +248,7 @@ class QuranTab extends StatelessWidget {
       children: [
         Container(
           alignment: Alignment.center,
-          child: Image(
+          child: const Image(
             image: AssetImage(
               'assets/images/screens_img/quran_tab.png',
             ),

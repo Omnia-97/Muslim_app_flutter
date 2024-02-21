@@ -9,7 +9,7 @@ import 'package:islami_app/providers/my_provider.dart';
 import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
   static const String routeName = 'Home Screen';
 
   @override

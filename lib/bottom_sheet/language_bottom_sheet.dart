@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 import '../providers/my_provider.dart';
 
 class LanguageBottomSheet extends StatelessWidget {
-  LanguageBottomSheet({super.key});
+  const LanguageBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {

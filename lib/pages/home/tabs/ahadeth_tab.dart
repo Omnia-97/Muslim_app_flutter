@@ -13,7 +13,7 @@ class AhadethTab extends StatelessWidget {
     return ChangeNotifierProvider<AhadethDetailsProvider>(
       create: (context) => AhadethDetailsProvider()..loadAhadethFile(),
       builder: (context, child) {
-        var theme = Theme.of(context);
+        var theme = Theme.of(context).textTheme;
         var provider = Provider.of<AhadethDetailsProvider>(context);
         return Column(
           children: [
@@ -25,7 +25,7 @@ class AhadethTab extends StatelessWidget {
             Divider(),
             Text(
               AppLocalizations.of(context)!.ahadeth,
-              style: theme.textTheme.bodyMedium,
+              style: theme.bodyMedium,
             ),
             Divider(),
             Expanded(
@@ -38,12 +38,15 @@ class AhadethTab extends StatelessWidget {
                 itemBuilder: (context, index) {
                   return InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, HadethDetails.routeName,
-                          arguments: provider.ahadethFileData[index]);
+                      Navigator.pushNamed(
+                        context,
+                        HadethDetails.routeName,
+                        arguments: provider.ahadethFileData[index],
+                      );
                     },
                     child: Text(
                       provider.ahadethFileData[index].title,
-                      style: theme.textTheme.bodySmall,
+                      style: theme.bodySmall,
                       textAlign: TextAlign.center,
                     ),
                   );

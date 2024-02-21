@@ -13,6 +13,7 @@ class LanguageBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
     String language = provider.languageCode;
+    var appLocalization =AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 24),
       child: Column(
@@ -20,7 +21,7 @@ class LanguageBottomSheet extends StatelessWidget {
           RadioListTile(
             activeColor: MyThemeData.primaryColor,
             title: Text(
-              AppLocalizations.of(context)!.english,
+              appLocalization.english,
               style: GoogleFonts.elMessiri(
                 fontSize: 30,
                 color: language == 'en'
@@ -39,7 +40,7 @@ class LanguageBottomSheet extends StatelessWidget {
               activeColor: MyThemeData.primaryColor,
               selectedTileColor: MyThemeData.primaryColor,
               title: Text(
-                AppLocalizations.of(context)!.arabic,
+                appLocalization.arabic,
                 style: GoogleFonts.elMessiri(
                   fontSize: 30,
                   color: language == 'ar'

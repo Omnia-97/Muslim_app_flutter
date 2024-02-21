@@ -21,7 +21,7 @@ class _SebhaTabState extends State<SebhaTab> {
 
   @override
   Widget build(BuildContext context) {
-    var theme = Theme.of(context);
+    var theme = Theme.of(context).textTheme;
     var provider = Provider.of<MyProvider>(context);
     return Column(
       children: [
@@ -46,7 +46,7 @@ class _SebhaTabState extends State<SebhaTab> {
         ),
         Text(
           AppLocalizations.of(context)!.numberOfTasbeh,
-          style: theme.textTheme.bodyMedium,
+          style: theme.bodyMedium,
           textAlign: TextAlign.center,
         ),
         SizedBox(
@@ -62,7 +62,7 @@ class _SebhaTabState extends State<SebhaTab> {
           ),
           child: Text(
             '$counter',
-            style: theme.textTheme.bodySmall,
+            style: theme.bodySmall,
           ),
         ),
         SizedBox(
@@ -78,7 +78,7 @@ class _SebhaTabState extends State<SebhaTab> {
           ),
           child: Text(
             tasbeh[index],
-            style: theme.textTheme.titleSmall,
+            style: theme.titleSmall,
           ),
         ),
       ],

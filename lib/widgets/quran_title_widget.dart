@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/providers/my_provider.dart';
 import 'package:provider/provider.dart';
-
-import '../islami_app_theme.dart';
 import '../model/sura_model.dart';
 import '../sura_details/sura_details.dart';
 
@@ -19,6 +17,7 @@ class QuranTitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
+    var theme = Theme.of(context).textTheme;
     return Row(
       children: [
         Expanded(
@@ -32,7 +31,7 @@ class QuranTitleWidget extends StatelessWidget {
             },
             child: Text(
               suraName,
-              style: Theme.of(context).textTheme.bodySmall,
+              style: theme.bodySmall,
               textAlign: TextAlign.center,
             ),
           ),
@@ -45,7 +44,7 @@ class QuranTitleWidget extends StatelessWidget {
         Expanded(
           child: Text(
             versesNumber,
-            style: Theme.of(context).textTheme.bodySmall,
+            style: theme.bodySmall,
             textAlign: TextAlign.center,
           ),
         ),

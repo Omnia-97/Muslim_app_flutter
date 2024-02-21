@@ -22,6 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
+    var appLocalizations = AppLocalizations.of(context)!;
     return Stack(
       children: [
         Image(
@@ -36,7 +37,7 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             title: Text(
-              AppLocalizations.of(context)!.appName,
+              appLocalizations.appName,
             ),
           ),
           bottomNavigationBar: BottomNavigationBar(
@@ -53,27 +54,27 @@ class _HomeScreenState extends State<HomeScreen> {
                     AssetImage('assets/images/ic/ic_quran.png'),
                     size: 45,
                   ),
-                  label: AppLocalizations.of(context)!.nav_quran),
+                  label: appLocalizations.nav_quran),
               BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/ic/ic_ahadeth.png'),
                   ),
-                  label: AppLocalizations.of(context)!.nav_ahadeth),
+                  label: appLocalizations.nav_ahadeth),
               BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/ic/ic_sebha.png'),
                     size: 45,
                   ),
-                  label: AppLocalizations.of(context)!.nav_tasbeh),
+                  label: appLocalizations.nav_tasbeh),
               BottomNavigationBarItem(
                   icon: ImageIcon(
                     AssetImage('assets/images/ic/ic_radio.png'),
                     size: 44,
                   ),
-                  label: AppLocalizations.of(context)!.nav_radio),
+                  label: appLocalizations.nav_radio),
               BottomNavigationBarItem(
                   icon: Icon(Icons.settings),
-                  label: AppLocalizations.of(context)!.nav_settings),
+                  label: appLocalizations.nav_settings),
             ],
           ),
           body: tabs[index],

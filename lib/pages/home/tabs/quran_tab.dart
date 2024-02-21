@@ -242,6 +242,8 @@ class QuranTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
+    var appLocalizations =  AppLocalizations.of(context)!;
+    var theme =Theme.of(context).textTheme;
     return Column(
       children: [
         Container(
@@ -257,8 +259,8 @@ class QuranTab extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                AppLocalizations.of(context)!.suraName,
-                style: Theme.of(context).textTheme.bodyMedium,
+                appLocalizations.suraName,
+                style: theme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
             ),
@@ -269,8 +271,8 @@ class QuranTab extends StatelessWidget {
             ),
             Expanded(
               child: Text(
-                AppLocalizations.of(context)!.ayatNumber,
-                style: Theme.of(context).textTheme.bodyMedium,
+                appLocalizations.ayatNumber,
+                style: theme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
             ),

@@ -5,7 +5,7 @@ import 'package:provider/provider.dart';
 import 'home/home.dart';
 
 class SplashScreen extends StatefulWidget {
-  SplashScreen({super.key});
+ const SplashScreen({super.key});
   static const String routeName = 'Splash Screen';
 
   @override
@@ -13,13 +13,17 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(
+        const Duration(
+          seconds: 3,
+        ), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => HomeScreen(),
+          builder: (context) => const HomeScreen(),
         ),
       );
     });
@@ -37,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
           fit: BoxFit.fill,
         ),
       ),
-      child: Scaffold(
+      child: const Scaffold(
         backgroundColor: Colors.transparent,
       ),
     );

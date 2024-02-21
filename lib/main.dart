@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:islami_app/pages/home/home.dart';
 import 'package:islami_app/pages/splash_Screen.dart';
 import 'package:islami_app/sura_details/sura_details.dart';
-
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/providers/my_provider.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +12,7 @@ void main() {
   runApp(
     ChangeNotifierProvider<MyProvider>(
       create: (context) => MyProvider(),
-      child: IslamiApp(),
+      child: const IslamiApp(),
     ),
   );
 }
@@ -32,10 +31,10 @@ class IslamiApp extends StatelessWidget {
       darkTheme: MyThemeData.darkTheme,
       themeMode: provider.themeMode,
       routes: {
-        SplashScreen.routeName: (context) => SplashScreen(),
-        HomeScreen.routeName: (context) => HomeScreen(),
-        SuraDetails.routeName: (context) => SuraDetails(),
-        HadethDetails.routeName: (context) => HadethDetails(),
+        SplashScreen.routeName: (context) => const SplashScreen(),
+        HomeScreen.routeName: (context) => const HomeScreen(),
+        SuraDetails.routeName: (context) => const SuraDetails(),
+        HadethDetails.routeName: (context) => const HadethDetails(),
       },
       initialRoute: SplashScreen.routeName,
     );

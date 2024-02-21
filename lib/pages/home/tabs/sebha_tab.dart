@@ -4,7 +4,7 @@ import 'package:islami_app/providers/my_provider.dart';
 import 'package:provider/provider.dart';
 
 class SebhaTab extends StatefulWidget {
-  SebhaTab({super.key});
+  const SebhaTab({super.key});
 
   @override
   State<SebhaTab> createState() => _SebhaTabState();

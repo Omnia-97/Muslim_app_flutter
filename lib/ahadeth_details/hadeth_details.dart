@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:islami_app/islami_app_theme.dart';
-import 'package:islami_app/pages/home/tabs/ahadeth_tab.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
 
@@ -33,8 +31,8 @@ class HadethDetails extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            margin: EdgeInsets.all(25),
-            padding: EdgeInsets.all(16),
+            margin: const EdgeInsets.all(25),
+            padding: const EdgeInsets.all(16),
             width: 400,
             height: 700,
             decoration: BoxDecoration(

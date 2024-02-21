@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/ahadeth_details/ahadth_details_provider.dart';
 import 'package:islami_app/ahadeth_details/hadeth_details.dart';
 import 'package:provider/provider.dart';
 
 class AhadethTab extends StatelessWidget {
-  AhadethTab({super.key});
+  const AhadethTab({super.key});
 
   @override
   Widget build(BuildContext context) {

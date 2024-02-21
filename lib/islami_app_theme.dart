@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,7 +10,7 @@ class MyThemeData {
   static ThemeData lightTheme = ThemeData(
     brightness: Brightness.light,
     primaryColor: primaryColor,
-    dividerTheme: DividerThemeData(
+    dividerTheme: const DividerThemeData(
       color: primaryColor,
       thickness: 3,
     ),
@@ -43,7 +41,7 @@ class MyThemeData {
       elevation: 0,
       scrolledUnderElevation: 0,
       backgroundColor: Colors.transparent,
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: blackColor,
         size: 30,
       ),
@@ -53,7 +51,7 @@ class MyThemeData {
         color: blackColor,
       ),
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       elevation: 0,
       selectedItemColor: blackColor,
       showSelectedLabels: true,
@@ -66,7 +64,7 @@ class MyThemeData {
   static ThemeData darkTheme = ThemeData(
     brightness: Brightness.dark,
     primaryColor: primaryDarkColor,
-    dividerTheme: DividerThemeData(
+    dividerTheme: const DividerThemeData(
       color: amberColor,
       thickness: 3,
     ),
@@ -75,7 +73,7 @@ class MyThemeData {
         fontSize: 25,
         letterSpacing: .5,
         fontWeight: FontWeight.w500,
-        color: Color(0xFF0F1424),
+        color: const Color(0xFF0F1424),
       ),
       bodySmall: GoogleFonts.inter(
         fontSize: 25,
@@ -97,7 +95,7 @@ class MyThemeData {
       elevation: 0,
       scrolledUnderElevation: 0,
       backgroundColor: Colors.transparent,
-      iconTheme: IconThemeData(
+      iconTheme: const IconThemeData(
         color: whiteColor,
         size: 30,
       ),
@@ -107,7 +105,7 @@ class MyThemeData {
         color: whiteColor,
       ),
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       elevation: 0,
       selectedItemColor: amberColor,
       showSelectedLabels: true,

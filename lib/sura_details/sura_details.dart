@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami_app/model/sura_model.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -8,7 +7,7 @@ import 'package:islami_app/sura_details/sura_details_provider.dart';
 import 'package:provider/provider.dart';
 
 class SuraDetails extends StatelessWidget {
-  SuraDetails({super.key});
+  const SuraDetails({super.key});
   static const String routeName = 'Sura Details';
 
   @override

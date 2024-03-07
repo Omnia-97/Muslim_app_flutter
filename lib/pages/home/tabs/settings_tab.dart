@@ -34,7 +34,7 @@ class _SettingsTabState extends State<SettingsTab> {
                   context: context,
                   isScrollControlled: true,
                   builder: (context) {
-                    return Container(
+                    return const SizedBox(
                       height: 580,
                       child: LanguageBottomSheet(),
                     );
@@ -56,7 +56,7 @@ class _SettingsTabState extends State<SettingsTab> {
               ),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           Text(

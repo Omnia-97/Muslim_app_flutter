@@ -1,16 +1,50 @@
 import 'package:flutter/material.dart';
 import 'package:islami_app/islami_app_theme.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class MyProvider extends ChangeNotifier {
   String languageCode = "en";
-  ThemeMode themeMode = ThemeMode.light;
+  ThemeMode themeMode = ThemeMode.system;
+  SharedPreferences? sharedPreferences;
+
+  Future<void> setItems()async{
+     sharedPreferences = await SharedPreferences.getInstance();
+     if(getTheme() ?? false){
+       themeMode = ThemeMode.dark;
+     }else{
+       themeMode= ThemeMode.light;
+     }
+     if(getLang() ?? false){
+       languageCode = 'ar';
+     }else{
+       languageCode = 'en';
+     }
+
+  }
   void changeLanguage(String langCode) {
+    if(langCode == languageCode){
+      return;
+    }
     languageCode = langCode;
+    if(languageCode == 'ar'){
+      saveLang(true);
+    }
+    else{
+      saveLang(false);
+    }
     notifyListeners();
   }
 
   void changeThemeMode(ThemeMode mode) {
+    if(mode == themeMode){
+      return;
+    }
     themeMode = mode;
+    if(themeMode == ThemeMode.dark){
+      saveTheme(true);
+    }else{
+      saveTheme(false);
+    }
     notifyListeners();
   }
 
@@ -69,7 +103,18 @@ class MyProvider extends ChangeNotifier {
       return MyThemeData.primaryDarkColor.withOpacity(.8);
     }
   }
+  Future<void> saveTheme(bool isDark)async{
+   await sharedPreferences!.setBool('isDark', isDark);
 
-
+  }
+  Future<void> saveLang(bool isArabic)async{
+    await sharedPreferences!.setBool('isArabic', isArabic);
+  }
+  bool? getTheme(){
+    return sharedPreferences!.getBool('isDark');
+  }
+  bool? getLang(){
+    return sharedPreferences!.getBool('isArabic');
+  }
 
 }

@@ -8,10 +8,13 @@ import 'package:provider/provider.dart';
 import 'ahadeth_details/hadeth_details.dart';
 import 'islami_app_theme.dart';
 
-void main() {
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  MyProvider myProvider = MyProvider();
+   await myProvider.setItems();
   runApp(
-    ChangeNotifierProvider<MyProvider>(
-      create: (context) => MyProvider(),
+    ChangeNotifierProvider(
+      create: (context) => myProvider,
       child: const IslamiApp(),
     ),
   );

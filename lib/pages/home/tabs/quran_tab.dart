@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:islami_app/islami_app_theme.dart';
-import 'package:islami_app/model/sura_model.dart';
-import 'package:islami_app/details_Screens/sura_details.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami_app/providers/my_provider.dart';
 import 'package:islami_app/widgets/quran_title_widget.dart';
+import 'package:provider/provider.dart';
 
 class QuranTab extends StatelessWidget {
   QuranTab({super.key});
@@ -242,13 +241,16 @@ class QuranTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
+    var appLocalizations = AppLocalizations.of(context)!;
+    var theme = Theme.of(context).textTheme;
     return Column(
       children: [
         Container(
           alignment: Alignment.center,
-          child: Image(
+          child: const Image(
             image: AssetImage(
-              'assets/images/quran_tab.png',
+              'assets/images/screens_img/quran_tab.png',
             ),
           ),
         ),
@@ -257,20 +259,20 @@ class QuranTab extends StatelessWidget {
           children: [
             Expanded(
               child: Text(
-                'عدد الآيات',
-                style: Theme.of(context).textTheme.bodyMedium,
+                appLocalizations.suraName,
+                style: theme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
             ),
             Container(
               width: 1.5,
               height: 38,
-              color: MyThemeData.primaryColor,
+              color: provider.changeContainerColor(),
             ),
             Expanded(
               child: Text(
-                'اسم السورة',
-                style: Theme.of(context).textTheme.bodyMedium,
+                appLocalizations.ayatNumber,
+                style: theme.bodyMedium,
                 textAlign: TextAlign.center,
               ),
             ),
@@ -285,97 +287,10 @@ class QuranTab extends StatelessWidget {
                 versesNumber: versesNumber[index].toString(),
                 index: index,
               );
-              /*Row(
-                children: [
-                  Text(
-                    versesNumber[index].toString(),
-                    style: Theme.of(context).textTheme.bodySmall,
-                    textAlign: TextAlign.center,
-                  ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(
-                        context,
-                        SuraDetails.routeName,
-                        arguments:
-                            SuraModel(name: suraNames[index], index: index),
-                      );
-                    },
-                    child: Text(
-                      suraNames[index],
-                      style: Theme.of(context).textTheme.bodySmall,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ],
-              )*/
             },
             itemCount: suraNames.length,
           ),
         ),
-        /*  Expanded(
-          child: ListView(
-            children: [
-              DataTable(
-                columns: [
-                  DataColumn(
-                    label: Text(
-                      'عدد الآيات',
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                  ),
-                  DataColumn(
-                    label: Text(
-                      'اسم السوره',
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ),
-                  ),
-                ],
-                rows: List.generate(
-                  suraNames.length,
-                  (index) => DataRow(
-                    cells: [
-                      DataCell(
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            Text(
-                              '${versesNumber[index]}',
-                              textAlign: TextAlign.center,
-                              style: Theme.of(context).textTheme.bodySmall,
-                            ),
-                          ],
-                        ),
-                      ),
-                      DataCell(
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.stretch,
-                          children: [
-                            InkWell(
-                              onTap: () {
-                                Navigator.pushNamed(
-                                  context,
-                                  SuraDetails.routeName,
-                                  arguments: SuraModel(
-                                      name: suraNames[index], index: index),
-                                );
-                              },
-                              child: Text(
-                                textAlign: TextAlign.center,
-                                suraNames[index],
-                                style: Theme.of(context).textTheme.bodySmall,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),*/
       ],
     );
   }

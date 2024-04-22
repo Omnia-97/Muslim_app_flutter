@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami_app/pages/home/tabs/ahadeth_tab.dart';
 import 'package:islami_app/pages/home/tabs/quran_tab.dart';
 import 'package:islami_app/pages/home/tabs/radio_tab.dart';
 import 'package:islami_app/pages/home/tabs/sebha_tab.dart';
 import 'package:islami_app/pages/home/tabs/settings_tab.dart';
+import 'package:islami_app/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
   static const String routeName = 'Home Screen';
 
   @override
@@ -19,11 +21,13 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
+    var appLocalizations = AppLocalizations.of(context)!;
     return Stack(
       children: [
         Image(
           image: AssetImage(
-            'assets/images/background_home.png',
+            provider.changeBackGround(),
           ),
           fit: BoxFit.fill,
           width: double.infinity,
@@ -33,9 +37,8 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             backgroundColor: Colors.transparent,
             title: Text(
-              'إسلامي',
+              appLocalizations.appName,
             ),
-            centerTitle: true,
           ),
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: index,
@@ -47,30 +50,31 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             items: [
               BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    AssetImage('assets/images/ic_quran.png'),
+                  icon: const ImageIcon(
+                    AssetImage('assets/images/ic/ic_quran.png'),
                     size: 45,
                   ),
-                  label: 'القرآن'),
+                  label: appLocalizations.nav_quran),
               BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    AssetImage('assets/images/ic_ahadeth.png'),
+                  icon: const ImageIcon(
+                    AssetImage('assets/images/ic/ic_ahadeth.png'),
                   ),
-                  label: 'الأحاديث'),
+                  label: appLocalizations.nav_ahadeth),
               BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    AssetImage('assets/images/ic_sebha.png'),
+                  icon: const ImageIcon(
+                    AssetImage('assets/images/ic/ic_sebha.png'),
                     size: 45,
                   ),
-                  label: 'التسبيح'),
+                  label: appLocalizations.nav_tasbeh),
               BottomNavigationBarItem(
-                  icon: ImageIcon(
-                    AssetImage('assets/images/ic_radio.png'),
+                  icon: const ImageIcon(
+                    AssetImage('assets/images/ic/ic_radio.png'),
                     size: 44,
                   ),
-                  label: 'الراديو'),
+                  label: appLocalizations.nav_radio),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.settings), label: 'الإعدادات'),
+                  icon: const Icon(Icons.settings),
+                  label: appLocalizations.nav_settings),
             ],
           ),
           body: tabs[index],
@@ -81,9 +85,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> tabs = [
     QuranTab(),
-    AhadethTab(),
-    SebhaTab(),
-    RadioTab(),
-    SettingsTab(),
+    const AhadethTab(),
+    const SebhaTab(),
+    const RadioTab(),
+    const SettingsTab(),
   ];
 }

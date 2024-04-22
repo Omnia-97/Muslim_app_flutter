@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:islami_app/providers/my_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'home/home.dart';
 
 class SplashScreen extends StatefulWidget {
-  SplashScreen({super.key});
+ const SplashScreen({super.key});
   static const String routeName = 'Splash Screen';
 
   @override
@@ -11,13 +13,17 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(seconds: 3), () {
+    Future.delayed(
+        const Duration(
+          seconds: 3,
+        ), () {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => HomeScreen(),
+          builder: (context) => const HomeScreen(),
         ),
       );
     });
@@ -25,14 +31,17 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<MyProvider>(context);
     return Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/Splash.png'),
+          image: AssetImage(
+            provider.changeSplashScreen(),
+          ),
           fit: BoxFit.fill,
         ),
       ),
-      child: Scaffold(
+      child: const Scaffold(
         backgroundColor: Colors.transparent,
       ),
     );

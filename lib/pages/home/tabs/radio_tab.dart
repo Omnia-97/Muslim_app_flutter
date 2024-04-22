@@ -18,12 +18,12 @@ class RadioTab extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Image(
+        const Image(
           width: 412,
           height: 222,
           image: AssetImage('assets/images/screens_img/radio_screen.png'),
         ),
-        SizedBox(
+        const SizedBox(
           height: 45,
         ),
         Text(
@@ -31,7 +31,7 @@ class RadioTab extends StatelessWidget {
           style: theme.textTheme.bodyMedium,
           textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 45,
         ),
         Row(

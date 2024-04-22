@@ -25,7 +25,7 @@ class _SebhaTabState extends State<SebhaTab> {
     var provider = Provider.of<MyProvider>(context);
     return Column(
       children: [
-        SizedBox(
+        const SizedBox(
           height: 10,
         ),
         InkWell(
@@ -41,7 +41,7 @@ class _SebhaTabState extends State<SebhaTab> {
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 45,
         ),
         Text(
@@ -49,7 +49,7 @@ class _SebhaTabState extends State<SebhaTab> {
           style: theme.bodyMedium,
           textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Container(
@@ -65,7 +65,7 @@ class _SebhaTabState extends State<SebhaTab> {
             style: theme.bodySmall,
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
         Container(

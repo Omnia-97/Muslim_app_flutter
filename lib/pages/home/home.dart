@@ -50,30 +50,30 @@ class _HomeScreenState extends State<HomeScreen> {
             },
             items: [
               BottomNavigationBarItem(
-                  icon: ImageIcon(
+                  icon: const ImageIcon(
                     AssetImage('assets/images/ic/ic_quran.png'),
                     size: 45,
                   ),
                   label: appLocalizations.nav_quran),
               BottomNavigationBarItem(
-                  icon: ImageIcon(
+                  icon: const ImageIcon(
                     AssetImage('assets/images/ic/ic_ahadeth.png'),
                   ),
                   label: appLocalizations.nav_ahadeth),
               BottomNavigationBarItem(
-                  icon: ImageIcon(
+                  icon: const ImageIcon(
                     AssetImage('assets/images/ic/ic_sebha.png'),
                     size: 45,
                   ),
                   label: appLocalizations.nav_tasbeh),
               BottomNavigationBarItem(
-                  icon: ImageIcon(
+                  icon: const ImageIcon(
                     AssetImage('assets/images/ic/ic_radio.png'),
                     size: 44,
                   ),
                   label: appLocalizations.nav_radio),
               BottomNavigationBarItem(
-                  icon: Icon(Icons.settings),
+                  icon: const Icon(Icons.settings),
                   label: appLocalizations.nav_settings),
             ],
           ),
@@ -85,9 +85,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
   List<Widget> tabs = [
     QuranTab(),
-    AhadethTab(),
-    SebhaTab(),
-    RadioTab(),
-    SettingsTab(),
+    const AhadethTab(),
+    const SebhaTab(),
+    const RadioTab(),
+    const SettingsTab(),
   ];
 }

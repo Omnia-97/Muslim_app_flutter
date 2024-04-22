@@ -13,7 +13,7 @@ class ThemeBottomSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
     ThemeMode theme = provider.themeMode;
-    var appLocalization =AppLocalizations.of(context)!;
+    var appLocalization = AppLocalizations.of(context)!;
     return Padding(
       padding: const EdgeInsets.only(left: 16, right: 16, bottom: 16, top: 24),
       child: Column(

@@ -242,8 +242,8 @@ class QuranTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var provider = Provider.of<MyProvider>(context);
-    var appLocalizations =  AppLocalizations.of(context)!;
-    var theme =Theme.of(context).textTheme;
+    var appLocalizations = AppLocalizations.of(context)!;
+    var theme = Theme.of(context).textTheme;
     return Column(
       children: [
         Container(

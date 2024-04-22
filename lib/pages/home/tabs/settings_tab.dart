@@ -41,7 +41,7 @@ class _SettingsTabState extends State<SettingsTab> {
                   });
             },
             child: Container(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               width: double.infinity,
               decoration: BoxDecoration(
                   border: Border.all(
@@ -69,14 +69,14 @@ class _SettingsTabState extends State<SettingsTab> {
                   context: context,
                   isScrollControlled: true,
                   builder: (context) {
-                    return Container(
+                    return const SizedBox(
                       height: 460,
                       child: ThemeBottomSheet(),
                     );
                   });
             },
             child: Container(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               width: double.infinity,
               decoration: BoxDecoration(
                   border: Border.all(

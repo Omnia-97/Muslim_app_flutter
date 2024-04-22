@@ -16,7 +16,7 @@ class SuraDetails extends StatelessWidget {
     var provider2 = Provider.of<MyProvider>(context);
     bool isTextDirectionRTL = Directionality.of(context) == TextDirection.rtl;
     var appLocalizations = AppLocalizations.of(context)!;
-    var theme =Theme.of(context).textTheme;
+    var theme = Theme.of(context).textTheme;
     return ChangeNotifierProvider<SuraDetailsProvider>(
       create: (context) => SuraDetailsProvider()..loadFile(model.index),
       builder: (context, child) {
@@ -40,11 +40,11 @@ class SuraDetails extends StatelessWidget {
                 height: 700,
                 width: 400,
                 child: Card(
-                  margin: EdgeInsets.all(25),
+                  margin: const EdgeInsets.all(25),
                   color: provider2.changeCardColor(),
                   shape: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(25),
-                    borderSide: BorderSide(color: Colors.transparent),
+                    borderSide: const BorderSide(color: Colors.transparent),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -61,14 +61,13 @@ class SuraDetails extends StatelessWidget {
                                   size: 35,
                                   color: provider2.changeQuranTextColor(),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Text(
                                   'سورة ${model.name}',
                                   style: GoogleFonts.elMessiri(
-                                    textStyle:
-                                        theme.bodyLarge,
+                                    textStyle: theme.bodyLarge,
                                     color: provider2.changeQuranTextColor(),
                                   ),
                                   textAlign: TextAlign.center,
@@ -78,13 +77,12 @@ class SuraDetails extends StatelessWidget {
                                 Text(
                                   'سورة ${model.name}',
                                   style: GoogleFonts.elMessiri(
-                                    textStyle:
-                                        theme.bodyLarge,
+                                    textStyle: theme.bodyLarge,
                                     color: provider2.changeQuranTextColor(),
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 10,
                                 ),
                                 Icon(
@@ -96,14 +94,15 @@ class SuraDetails extends StatelessWidget {
                             ],
                           ),
                         ),
-                        Divider(
+                        const Divider(
                           thickness: 1,
                           indent: 18,
                           endIndent: 18,
                         ),
                         Expanded(
                           child: ListView.separated(
-                            separatorBuilder: (context, index) => SizedBox(
+                            separatorBuilder: (context, index) =>
+                                const SizedBox(
                               height: 12,
                             ),
                             itemBuilder: (context, index) {
@@ -112,8 +111,7 @@ class SuraDetails extends StatelessWidget {
                                   Text(
                                     provider.verses[index],
                                     style: GoogleFonts.inter(
-                                      textStyle:
-                                         theme.bodySmall,
+                                      textStyle: theme.bodySmall,
                                       color: provider2.changeQuranTextColor(),
                                     ),
                                     textAlign: TextAlign.center,

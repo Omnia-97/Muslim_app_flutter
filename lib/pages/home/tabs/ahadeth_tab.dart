@@ -16,20 +16,20 @@ class AhadethTab extends StatelessWidget {
         var provider = Provider.of<AhadethDetailsProvider>(context);
         return Column(
           children: [
-            Image(
+            const Image(
               image: AssetImage('assets/images/screens_img/ahadeth_screen.png'),
               width: 312,
               height: 219,
             ),
-            Divider(),
+            const Divider(),
             Text(
               AppLocalizations.of(context)!.ahadeth,
               style: theme.bodyMedium,
             ),
-            Divider(),
+            const Divider(),
             Expanded(
               child: ListView.separated(
-                separatorBuilder: (context, index) => Divider(
+                separatorBuilder: (context, index) => const Divider(
                   indent: 50,
                   endIndent: 50,
                   thickness: 1,

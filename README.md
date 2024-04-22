@@ -44,7 +44,7 @@ We value your feedback! If you encounter any issues, have suggestions for improv
 
 ## Credits:
 
-This project is maintained by [Omnia-97](https://github.com/Omnia-97) and contributions from the open-source community.
+This project is maintained by [Omnia-97](https://github.com/Omnia-97) .
 
 ---
 

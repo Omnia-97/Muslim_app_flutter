@@ -3,22 +3,22 @@
 Welcome to Muslim App, your companion for spiritual growth and guidance! This Flutter app is designed to provide a range of features tailored for Muslims around the world. With Muslim App, you can easily access the Quran, a collection of Hadiths, engage in Dhikr (remembrance of Allah), and tune in to a radio station for spiritual nourishment.
 
 ## Features:
-📖 **Quranic Verses**: Access to all chapters (Surahs) of the Quran Kareem.
-🕌 **Hadith Collection**: Explore a variety of authentic Prophetic traditions (Ahadith).
-📿 **Dhikr Counter**: Keep track of your recitations and repetitions with a built-in Tasbih counter.
-📻 **Spiritual Radio**: Listen to Quranic recitations via the integrated radio feature.
-📦 **State Management**: Utilizes Provider for efficient state management.
-🔒 **Data Persistence**: Utilizes shared preferences and local file reading for seamless user experience.
-🌍 **Localization**: Available in Arabic and English for wider accessibility.
-🌓 **Dark and Light Mode**: Choose between light and dark themes according to your preference.
+- 📖 **Quranic Verses**: Access to all chapters (Surahs) of the Quran Kareem.
+- 🕌 **Hadith Collection**: Explore a variety of authentic Prophetic traditions (Ahadith).
+- 📿 **Dhikr Counter**: Keep track of your recitations and repetitions with a built-in Tasbih counter.
+- 📻 **Spiritual Radio**: Listen to Quranic recitations via the integrated radio feature.
+- 📦 **State Management**: Utilizes Provider for efficient state management.
+- 🔒 **Data Persistence**: Utilizes shared preferences and local file reading for seamless user experience.
+- 🌍 **Localization**: Available in Arabic and English for wider accessibility.
+- 🌓 **Dark and Light Mode**: Choose between light and dark themes according to your preference.
 
 ## Technologies
-🔄 **Provider**: Used for efficient state management.
-💾 **Shared Preferences**: Used for data persistence.
-📂 **Local File Reading**: Used for data persistence.
-🌐 **API Integration**: Utilized an API for the radio feature.
-🌍 **Localization Support**: Implemented for Arabic and English languages.
-🌓 **Dark Mode and Light Mode**: Implemented for user preference.
+- 🔄 **Provider**: Used for efficient state management.
+- 💾 **Shared Preferences**: Used for data persistence.
+- 📂 **Local File Reading**: Used for data persistence.
+- 🌐 **API Integration**: Utilized an API for the radio feature.
+- 🌍 **Localization Support**: Implemented for Arabic and English languages.
+- 🌓 **Dark Mode and Light Mode**: Implemented for user preference.
 
 ## Getting Started:
 1. Clone this repository to your local machine.

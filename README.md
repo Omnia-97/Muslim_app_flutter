@@ -1,16 +1,16 @@
 # Muslim App 🕌
 
-Welcome to Muslim App, your companion for spiritual growth and guidance! This Flutter app is designed to provide a range of features tailored for Muslims around the world. With Muslim App, you can easily access the Holy Quran, a collection of Hadiths, engage in Dhikr (remembrance of Allah), and tune in to a radio station for spiritual nourishment.
+Welcome to Muslim App, your companion for spiritual growth and guidance! This Flutter app is designed to provide a range of features tailored for Muslims around the world. With Muslim App, you can easily access the Quran, a collection of Hadiths, engage in Dhikr (remembrance of Allah), and tune in to a radio station for spiritual nourishment.
 
 ## Features:
 
-📖 **Quranic Verses**: Access to all chapters (Surahs) of the Holy Quran.
+📖 **Quranic Verses**: Access to all chapters (Surahs) of the Quran Kareem.
   
 🕌 **Hadith Collection**: Explore a variety of authentic Prophetic traditions (Ahadith).
 
 📿 **Dhikr Counter**: Keep track of your recitations and repetitions with a built-in Tasbih counter.
 
-📻 **Spiritual Radio**: Listen to spiritual talks and Quranic recitations via the integrated radio feature.
+📻 **Spiritual Radio**: Listen to Quranic recitations via the integrated radio feature.
 
 📦 **State Management**: Utilizes Provider for efficient state management.
 

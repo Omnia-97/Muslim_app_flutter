@@ -7,42 +7,41 @@ class MyProvider extends ChangeNotifier {
   ThemeMode themeMode = ThemeMode.system;
   SharedPreferences? sharedPreferences;
 
-  Future<void> setItems()async{
-     sharedPreferences = await SharedPreferences.getInstance();
-     if(getTheme() ?? false){
-       themeMode = ThemeMode.dark;
-     }else{
-       themeMode= ThemeMode.light;
-     }
-     if(getLang() ?? false){
-       languageCode = 'ar';
-     }else{
-       languageCode = 'en';
-     }
-
+  Future<void> setItems() async {
+    sharedPreferences = await SharedPreferences.getInstance();
+    if (getTheme() ?? false) {
+      themeMode = ThemeMode.dark;
+    } else {
+      themeMode = ThemeMode.light;
+    }
+    if (getLang() ?? false) {
+      languageCode = 'ar';
+    } else {
+      languageCode = 'en';
+    }
   }
+
   void changeLanguage(String langCode) {
-    if(langCode == languageCode){
+    if (langCode == languageCode) {
       return;
     }
     languageCode = langCode;
-    if(languageCode == 'ar'){
+    if (languageCode == 'ar') {
       saveLang(true);
-    }
-    else{
+    } else {
       saveLang(false);
     }
     notifyListeners();
   }
 
   void changeThemeMode(ThemeMode mode) {
-    if(mode == themeMode){
+    if (mode == themeMode) {
       return;
     }
     themeMode = mode;
-    if(themeMode == ThemeMode.dark){
+    if (themeMode == ThemeMode.dark) {
       saveTheme(true);
-    }else{
+    } else {
       saveTheme(false);
     }
     notifyListeners();
@@ -103,18 +102,20 @@ class MyProvider extends ChangeNotifier {
       return MyThemeData.primaryDarkColor.withOpacity(.8);
     }
   }
-  Future<void> saveTheme(bool isDark)async{
-   await sharedPreferences!.setBool('isDark', isDark);
 
+  Future<void> saveTheme(bool isDark) async {
+    await sharedPreferences!.setBool('isDark', isDark);
   }
-  Future<void> saveLang(bool isArabic)async{
+
+  Future<void> saveLang(bool isArabic) async {
     await sharedPreferences!.setBool('isArabic', isArabic);
   }
-  bool? getTheme(){
+
+  bool? getTheme() {
     return sharedPreferences!.getBool('isDark');
   }
-  bool? getLang(){
+
+  bool? getLang() {
     return sharedPreferences!.getBool('isArabic');
   }
-
 }

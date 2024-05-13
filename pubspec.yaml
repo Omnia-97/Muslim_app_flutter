@@ -39,6 +39,8 @@ dependencies:
   google_fonts: ^6.1.0
   provider: ^6.1.1
   shared_preferences: ^2.2.2
+  http: ^1.2.0
+  audioplayers: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -46,6 +48,11 @@ dev_dependencies:
   flutter_localizations:
     sdk: flutter
   intl: ^0.18.1
+  flutter_launcher_icons: ^0.13.1
+flutter_launcher_icons:
+  image_path: "assets/images/ic/logo.png"
+  android: "ic_launcher"
+  ios: true
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
   # activated in the `analysis_options.yaml` file located at the root of your

@@ -43,8 +43,8 @@ I welcome contributions from the community to enhance Muslim App further. Whethe
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/quran_details.png" height="400">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/ahadeth_tab.png" height="400">
 </div>
-
-<div style="display: flex; justify-content: space-between; margin-top: 100px;">
+<div style="height: 100px;"></div>
+<div style="display: flex; justify-content: space-between;">
        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/ahadeth_details.png" height="400">
        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/tasbeh_tab.png" height="400">
        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/radio_tab.png" height="400">

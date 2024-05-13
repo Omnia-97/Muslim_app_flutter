@@ -34,6 +34,7 @@ class ThemeBottomSheet extends StatelessWidget {
             onChanged: (val) {
               theme = val!;
               provider.changeThemeMode(ThemeMode.light);
+              Navigator.pop(context);
             },
           ),
           RadioListTile(
@@ -52,6 +53,7 @@ class ThemeBottomSheet extends StatelessWidget {
               onChanged: (val) {
                 theme = val!;
                 provider.changeThemeMode(ThemeMode.dark);
+                Navigator.pop(context);
               }),
         ],
       ),

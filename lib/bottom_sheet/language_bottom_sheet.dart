@@ -34,6 +34,7 @@ class LanguageBottomSheet extends StatelessWidget {
             onChanged: (val) {
               language = val!;
               provider.changeLanguage('en');
+              Navigator.pop(context);
             },
           ),
           RadioListTile(
@@ -53,6 +54,7 @@ class LanguageBottomSheet extends StatelessWidget {
               onChanged: (val) {
                 language = val!;
                 provider.changeLanguage('ar');
+                Navigator.pop(context);
               }),
         ],
       ),

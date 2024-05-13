@@ -37,21 +37,33 @@ I welcome contributions from the community to enhance Muslim App further. Whethe
 5. Create a new Pull Request.
 
 ## ScreenShots 📸 
-<div style="display: flex; justify-content: space-between; margin-bottom: 100px;">
+<style>
+    .screenshot-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .spacer {
+        height: 100px; /* Adjust the height as needed */
+    }
+</style>
+
+<div class="screenshot-row">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/splash.png" height="400">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/quran_tab.png" height="400">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/quran_details.png" height="400">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/ahadeth_tab.png" height="400">
 </div>
 
-<div style="margin-top: 100px;">
-    <div style="display: flex; justify-content: space-between;">
-        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/ahadeth_details.png" height="400">
-        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/tasbeh_tab.png" height="400">
-        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/radio_tab.png" height="400">
-        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/settings_tab.png" height="400">
-    </div>
+<div class="spacer"></div>
+
+<div class="screenshot-row">
+    <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/ahadeth_details.png" height="400">
+    <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/tasbeh_tab.png" height="400">
+    <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/radio_tab.png" height="400">
+    <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/settings_tab.png" height="400">
 </div>
+
 
 ## Credits:
 This project is maintained by [Omnia-97](https://github.com/Omnia-97) .

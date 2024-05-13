@@ -12,7 +12,7 @@ Welcome to Muslim App, your companion for spiritual growth and guidance! This Fl
 - 🌍 **Localization**: Available in Arabic and English for wider accessibility.
 - 🌓 **Dark and Light Mode**: Choose between light and dark themes according to your preference.
 
-## Technologies
+## Technologies:
 - 🔄 **Provider**: Used for efficient state management.
 - 💾 **Shared Preferences**: Used for data persistence.
 - 📂 **Local File Reading**: Used for data persistence.

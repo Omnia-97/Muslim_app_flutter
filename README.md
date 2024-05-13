@@ -37,13 +37,13 @@ I welcome contributions from the community to enhance Muslim App further. Whethe
 5. Create a new Pull Request.
 
 ## ScreenShots 📸 
-<div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 100px;">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/splash.png" height="400">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/quran_tab.png" height="400">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/quran_details.png" height="400">
     <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/ahadeth_tab.png" height="400">
 </div>
-<div style="height: 100px;"></div>
+
 <div style="display: flex; justify-content: space-between;">
        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/ahadeth_details.png" height="400">
        <img src="https://github.com/Omnia-97/Muslim_app_flutter/blob/master/assets/screen_shots/tasbeh_tab.png" height="400">

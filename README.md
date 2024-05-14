@@ -9,7 +9,6 @@ Welcome to Muslim App, your companion for spiritual growth and guidance! This Fl
 - 📻 **Spiritual Radio**: Listen to Quranic recitations via the integrated radio feature.
 - 📦 **State Management**: Utilizes Provider for efficient state management.
 - 🔒 **Data Persistence**: Utilizes shared preferences and local file reading for seamless user experience.
-- 🌍 **Localization**: Available in Arabic and English for wider accessibility.
 - 🌓 **Dark and Light Mode**: Choose between light and dark themes according to your preference.
 
 ## Technologies:
@@ -17,6 +16,7 @@ Welcome to Muslim App, your companion for spiritual growth and guidance! This Fl
 - 💾 **Shared Preferences**: Used for data persistence.
 - 📂 **Local File Reading**: Used for data persistence.
 - 🌐 **API Integration**: Utilized an API for the radio feature.
+- 🌍 **Localization**: Available in Arabic and English for wider accessibility.
   
 ## Getting Started:
 1. Clone this repository to your local machine.

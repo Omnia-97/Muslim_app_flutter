@@ -17,6 +17,7 @@ Welcome to Muslim App, your companion for spiritual growth and guidance! This Fl
 - 💾 **Shared Preferences**: Used for data persistence.
 - 📂 **Local File Reading**: Used for data persistence.
 - 🌐 **API Integration**: Utilized an API for the radio feature.
+- 🌍 **Localization**: Involves leveraging the localization and internationalization technologies provided by Flutter.
   
 ## Getting Started:
 1. Clone this repository to your local machine.
